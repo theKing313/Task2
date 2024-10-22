@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аккордеон</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <section>
+
+        <div class="accordion-body">
+            <div class="accordion-main">
+                <h2> На что рассчитывать привзыскании неустойки по ДДУ?</h2>
+                <p>
+                    Когда застройщик нарушает сроки сдачи по ДДУ, вы как дольщик имеете право требовать неустойку за
+                    просрочку, а также компенсацию убытков, вызванных этой просрочкой.
+                    Само собой, застройщику невыгодно добровольно выплачивать вам компенсацию. Когда дело доходит до
+                    суда, суд урезает сумму неустойки на основании ст. 333 ГК РФ. Это урезание практически неизбежно.
+                    Основная наша задача состоит в том, чтобы взыскать неустойку по ДДУ в максимальном размере, т.е.
+                    избежать сильного ее урезания. Вот что вы можете требовать от застройщика.
+                </p>
+            </div>
+            <div class="accordions">
+
+                <!-- Первый основной пункт -->
+                <div class="accordion">
+                    <div class="accordion-header">
+                        На что рассчитывать при взыскании неустойки по ДДУ?
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-1"></div>
+                </div>
+
+                <!-- Второй основной пункт -->
+                <div class="accordion">
+                    <div class="accordion-header">
+                        Выплата неустойки по ДДУ
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-2"></div>
+                </div>
+
+                <!-- Подпункты внутри второго пункта -->
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        Компенсация морального вреда
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-3"></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        Штраф в размере 50%
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-4"></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        Компенсация расходов по аренде жилья
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-5"></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        Компенсация убытков по ипотеке
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-6"></div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        Возмещение иных расходов
+                        <img src="./img/Down.svg" alt="Стрелка вниз">
+                    </div>
+                    <div class="accordion-content" id="content-7"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </div>
+
+
+    <script>
+
+        const content1 = `
+            Когда застройщик нарушает сроки сдачи по ДДУ, вы как дольщик имеете право требовать неустойку за просрочку, а также компенсацию убытков, вызванных этой просрочкой.
+            Само собой, застройщику невыгодно добровольно выплачивать вам компенсацию. Когда дело доходит до суда, суд урезает сумму неустойки на основании ст. 333 ГК РФ. Это урезание практически неизбежно.
+            Основная наша задача состоит в том, чтобы взыскать неустойку по ДДУ в максимальном размере, т.е. избежать сильного ее урезания. Вот что вы можете требовать от застройщика.
+        `;
+
+        const content2 = `
+            Компенсация морального вреда, штраф в размере 50%, компенсация расходов по аренде жилья, компенсация убытков по ипотеке и возмещение иных расходов — все это может быть взыскано с застройщика при нарушении сроков сдачи объекта по ДДУ.
+        `;
+
+        const content3 = `Вы можете потребовать компенсацию морального вреда за неудобства, причиненные задержкой сдачи жилья.`;
+        const content4 = `В случае нарушения сроков застройщик может быть оштрафован на 50% от суммы взыскания в вашу пользу.`;
+        const content5 = `Компенсация за вынужденную аренду жилья до получения ключей от вашей квартиры.`;
+        const content6 = `Компенсация убытков, связанных с ипотекой, которая продолжает начисляться в период задержки сдачи объекта.`;
+        const content7 = `Другие расходы, которые вы понесли в связи с задержкой сдачи жилья, могут быть возмещены.`;
+
+        document.getElementById('content-1').innerHTML = content1;
+        document.getElementById('content-2').innerHTML = content2;
+        document.getElementById('content-3').innerHTML = content3;
+        document.getElementById('content-4').innerHTML = content4;
+        document.getElementById('content-5').innerHTML = content5;
+        document.getElementById('content-6').innerHTML = content6;
+        document.getElementById('content-7').innerHTML = content7;
+        document.getElementById('content-1').innerHTML = content1;
+        document.getElementById('content-2').innerHTML = content2;
+
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            const header = accordion.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                accordion.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
